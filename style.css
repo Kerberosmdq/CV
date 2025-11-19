@@ -1,0 +1,500 @@
+/* --- 1. VARIABLES --- */
+:root {
+    --bg-main: #0f172a;
+    --bg-secondary: #1e293b;
+    --accent: #0ea5e9;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --nav-height: 70px;
+    --border-radius: 12px;
+}
+
+/* --- 2. RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- 3. HEADER --- */
+.barra-superior {
+    position: sticky;
+    top: 0;
+    height: var(--nav-height);
+    background-color: rgba(15, 23, 42, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.Nombre {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+/* --- 4. SECCIONES GENERALES --- */
+section {
+    padding: 80px 20px;
+    /* Base padding */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    margin-top: -30px;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- 5. HERO --- */
+#presentacion {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap-reverse;
+}
+
+.presentacion-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.presentacion-texto h2 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.presentacion-texto h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.presentacion-texto .resaltado {
+    color: var(--text-main);
+    background: linear-gradient(to right, var(--accent), #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-container {
+    margin-top: 30px;
+}
+
+.boton-principal {
+    background-color: var(--accent);
+    color: var(--bg-main);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.boton-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+}
+
+.presentacion-imagen img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+}
+
+/* --- 6. CARDS (About, Exp, Skills) --- */
+.about-content {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent);
+}
+
+.experiencia-lista,
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.puesto-trabajo,
+.skill-card {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.puesto-trabajo:hover,
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.puesto-trabajo h4,
+.skill-card h4 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.puesto-detalle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.puesto-trabajo li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.puesto-trabajo li::before {
+    content: '▹';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+.lista-skills li {
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+/* --- 7. CONTACTO & FOOTER --- */
+.contacto-container {
+    text-align: center;
+    background-color: var(--bg-secondary);
+    padding: 60px 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contacto-intro {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.enlaces-grid {
+    display: grid;
+    /* Ajustado para 4 columnas con tamaño mínimo de 220px */
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    /* Por defecto: Vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.contacto-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+/* === Modificaciones para Consistencia === */
+.contacto-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+
+
+/* Eliminamos los estilos 'flex-direction: row' del WhatsApp para que sea vertical como las otras tarjetas */
+.contacto-card.whatsapp {
+    /* Eliminamos estilos de row */
+    padding: 25px;
+    /* Restauramos el padding estándar */
+}
+
+/* El contenedor de textos del WhatsApp, que ya no tiene que alinearse horizontalmente */
+.contacto-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centramos el texto en la tarjeta vertical */
+}
+
+/* ======================================= */
+
+.contacto-titulo {
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+.contacto-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Estilos específicos Hover */
+.contacto-card.email:hover .contacto-icon {
+    color: #ea4335;
+}
+
+.contacto-card.email:hover {
+    border-color: #ea4335;
+}
+
+.contacto-card.linkedin:hover .contacto-icon {
+    color: #0a66c2;
+}
+
+.contacto-card.linkedin:hover {
+    border-color: #0a66c2;
+}
+
+.contacto-card.github:hover .contacto-icon {
+    color: var(--text-main);
+}
+
+.contacto-card.github:hover {
+    border-color: var(--text-main);
+}
+
+.contacto-card.whatsapp:hover .contacto-icon {
+    color: #25D366;
+}
+
+.contacto-card.whatsapp:hover {
+    border-color: #25D366;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* --- 8. RESPONSIVE (Ajustes Adicionales) --- */
+
+/* Pantallas medianas/grandes (tablets) */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: none;
+    }
+
+    #presentacion {
+        gap: 30px;
+        min-height: auto;
+        padding-top: 40px;
+    }
+
+    .presentacion-texto {
+        text-align: center;
+    }
+
+    .presentacion-texto h3 {
+        font-size: 2rem;
+    }
+
+    .presentacion-imagen {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    /* Las tarjetas de contacto pasan a 2 columnas en tablets */
+    .enlaces-grid {
+        /* Fuerza 2 columnas para que 4 tarjetas se vean en 2 filas de 2 */
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+    }
+
+    /* En tablets, la tarjeta de WhatsApp (y todas) ya son verticales por defecto, centramos sus textos */
+    .contacto-textos {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Pantallas pequeñas (móviles - general) */
+@media (max-width: 600px) {
+    .barra-superior {
+        padding: 0 5%;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .presentacion-texto h3 {
+        font-size: 1.7rem;
+    }
+
+    .presentacion-imagen img {
+        width: 200px;
+        height: 200px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    /* Las tarjetas de contacto se apilan a 1 columna para facilitar el clic */
+    .enlaces-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .contacto-textos {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content {
+        padding: 30px;
+    }
+
+    .experiencia-lista,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .puesto-trabajo,
+    .skill-card {
+        padding: 25px;
+    }
+}
+
+/* Pantallas extra pequeñas (móviles - 360px y menos) */
+@media (max-width: 360px) {
+
+    .Nombre {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .presentacion-texto h3 {
+        font-size: 1.5rem;
+    }
+
+    .presentacion-texto p {
+        font-size: 0.95rem;
+    }
+
+    .boton-principal {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
