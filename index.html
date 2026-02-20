@@ -27,6 +27,7 @@
         <nav class="navbar">
             <a href="#presentacion">Inicio</a>
             <a href="#about">Mi Perfil</a>
+            <a href="#projects">Proyectos</a>
             <a href="#experience">Trayectoria</a>
             <a href="#technical-skills">Skills</a>
             <a href="#contact">Contacto</a>
@@ -37,16 +38,16 @@
     <section id="presentacion">
         <div class="presentacion-texto">
             <h2>Miguel Giles</h2>
-            <h3>Técnico Electromecánico & <br><span class="resaltado">Desarrollador Web Autodidacta</span></h3>
+            <h3> <span class="resaltado">Vibecoding</span> & Soluciones Reales <br>Creatividad + Tecnología</h3>
             <br>
             <p>
-                Soy un profesional de la industria con una curiosidad insaciable por el código.
-                Aprendo programando y busco <strong>oportunidades freelance o proyectos colaborativos</strong>
-                que me permitan seguir creciendo técnicamente mientras aporto soluciones reales.
+                Más que código, creo soluciones. Mi fortaleza es la creatividad y la búsqueda constante de respuestas.
+                Utilizo la <strong>Inteligencia Artificial</strong> como herramienta para potenciar mis ideas y resolver problemas del día a día, de la vida y del trabajo.
+                Bienvenido a mi espacio de creación.
             </p>
             <br>
             <div class="cta-container">
-                <a href="#contact" class="boton-principal">Hablemos de Proyectos</a>
+                <a href="#projects" class="boton-principal">Ver mis Proyectos</a>
             </div>
         </div>
         <div class="presentacion-imagen">
@@ -72,6 +73,42 @@
                 pueda asumir de forma paralela,
                 donde mi capacidad técnica y mi compromiso con el aprendizaje aporten valor desde el primer día.
             </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: MANIFIESTO VIBECODING -->
+    <section id="manifesto" class="vibecoding-section">
+        <h3>Filosofía Vibecoding</h3>
+        <div class="manifesto-content">
+            <p class="manifesto-text">
+                "La IA me ayuda a crear, pero yo me enfoco en que esas creaciones solucionen problemas."
+            </p>
+            <div class="manifesto-details">
+                <div class="manifesto-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Creatividad</h4>
+                    <p>No se trata solo de escribir líneas, sino de imaginar soluciones nuevas.</p>
+                </div>
+                <div class="manifesto-card">
+                    <i class="fas fa-robot"></i>
+                    <h4>Inteligencia Artificial</h4>
+                    <p>Mi copiloto para acelerar el desarrollo y potenciar ideas.</p>
+                </div>
+                <div class="manifesto-card">
+                    <i class="fas fa-wrench"></i>
+                    <h4>Resolución</h4>
+                    <p>El objetivo final siempre es resolver un problema real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PROYECTOS (Dinámica) -->
+    <section id="projects">
+        <h3>Mis Creaciones</h3>
+        <p class="subtitulo-seccion">Aplicaciones y herramientas que he desarrollado.</p>
+        <div id="projects-container" class="projects-grid">
+            <!-- Los proyectos se cargarán aquí dinámicamente desde projects.js -->
         </div>
     </section>
 
@@ -198,7 +235,25 @@
         </footer>
     </section>
 
+    <!-- MODAL DE PROYECTOS -->
+    <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Proyecto">
+            <h3 id="modal-title">Título del Proyecto</h3>
+            <div class="modal-tags" id="modal-tags">
+                <!-- Tags dinámicos -->
+            </div>
+            <p id="modal-description">Descripción detallada...</p>
+            <div class="modal-links">
+                <a href="#" id="modal-demo" target="_blank" class="boton-principal">Ver Demo</a>
+                <a href="#" id="modal-code" target="_blank" class="boton-secundario">Ver Código</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Vinculación al Script JS -->
+    <script src="projects.js"></script>
     <script src="script.js"></script>
 </body>
 
