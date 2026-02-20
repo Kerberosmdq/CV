@@ -83,21 +83,27 @@
             <p class="manifesto-text">
                 "La IA me ayuda a crear, pero yo me enfoco en que esas creaciones solucionen problemas."
             </p>
-            <div class="manifesto-details">
-                <div class="manifesto-card">
-                    <i class="fas fa-brain"></i>
+            <div class="manifesto-grid">
+                <div class="manifesto-card card-creative">
+                    <div class="icon-container">
+                        <i class="fas fa-brain"></i>
+                    </div>
                     <h4>Creatividad</h4>
-                    <p>No se trata solo de escribir líneas, sino de imaginar soluciones nuevas.</p>
+                    <p>No se trata solo de escribir líneas, sino de imaginar soluciones nuevas. Romper el molde es la norma.</p>
                 </div>
-                <div class="manifesto-card">
-                    <i class="fas fa-robot"></i>
+                <div class="manifesto-card card-ai">
+                    <div class="icon-container">
+                        <i class="fas fa-robot"></i>
+                    </div>
                     <h4>Inteligencia Artificial</h4>
-                    <p>Mi copiloto para acelerar el desarrollo y potenciar ideas.</p>
+                    <p>Mi copiloto estratégico. Automatizo lo repetitivo para enfocarme en lo que realmente importa: la innovación.</p>
                 </div>
-                <div class="manifesto-card">
-                    <i class="fas fa-wrench"></i>
+                <div class="manifesto-card card-solution">
+                    <div class="icon-container">
+                        <i class="fas fa-wrench"></i>
+                    </div>
                     <h4>Resolución</h4>
-                    <p>El objetivo final siempre es resolver un problema real.</p>
+                    <p>El código es el medio, no el fin. El objetivo final siempre es resolver un problema real de forma eficiente.</p>
                 </div>
             </div>
         </div>
@@ -230,24 +236,60 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <p>&copy; 2025 Miguel Giles. | Desarrollador Autodidacta & Técnico Industrial.</p>
-        </footer>
     </section>
+
+    <!-- FOOTER REDISEÑADO -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Miguel Giles</h3>
+                <p>Creando soluciones digitales con creatividad y tecnología.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#presentacion">Inicio</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#contact">Contacto</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Conectemos</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/miguel-giles-04b576191/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:miga.gls246@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Miguel Giles. | Desarrollado con Vibecoding Philosophy.</p>
+        </div>
+    </footer>
 
     <!-- MODAL DE PROYECTOS -->
     <div id="project-modal" class="modal hidden">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img id="modal-image" src="" alt="Proyecto">
-            <h3 id="modal-title">Título del Proyecto</h3>
-            <div class="modal-tags" id="modal-tags">
-                <!-- Tags dinámicos -->
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-header-image">
+                <img id="modal-image" src="" alt="Proyecto">
+                <div class="modal-overlay-gradient"></div>
             </div>
-            <p id="modal-description">Descripción detallada...</p>
-            <div class="modal-links">
-                <a href="#" id="modal-demo" target="_blank" class="boton-principal">Ver Demo</a>
-                <a href="#" id="modal-code" target="_blank" class="boton-secundario">Ver Código</a>
+            <div class="modal-body">
+                <h3 id="modal-title">Título del Proyecto</h3>
+                <div class="modal-tags" id="modal-tags">
+                    <!-- Tags dinámicos -->
+                </div>
+                <p id="modal-description">Descripción detallada...</p>
+                <div class="modal-links">
+                    <a href="#" id="modal-demo" target="_blank" class="boton-principal">
+                        <i class="fas fa-external-link-alt"></i> Ver Demo
+                    </a>
+                    <a href="#" id="modal-code" target="_blank" class="boton-secundario">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
             </div>
         </div>
     </div>
